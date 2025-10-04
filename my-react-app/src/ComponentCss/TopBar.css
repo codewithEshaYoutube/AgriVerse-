@@ -1,0 +1,48 @@
+.top-bar {
+    background-color: #E4FFBA; /* Light green bar background */
+    width: 100%; /* Full width bar */
+    height: 60px; /* Height of the top bar */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    box-shadow: 0px 4px 2px -2px gray; /* Optional shadow for depth */
+    position: fixed; /* Keep it fixed */
+    top: 0;
+    left: 0;
+    z-index: 2; /* Ensure it's higher than other elements */
+}
+  
+/* Style the logo */
+.logo {
+    width: 160px; /* Fixed size for the logo */
+    height: 50px; /* Maintain aspect ratio */
+    object-fit: contain; /* Ensures the image fits without distortion */
+}
+ 
+.homepage-button {
+    background: none; /* Remove background */
+    border: none; /* Remove border */
+    padding: 0; /* Remove padding */
+    outline: none; /* Remove outline */
+    cursor: pointer; /* Change cursor to pointer to indicate it's clickable */
+}
+
+.homepage-button:focus {
+    outline: none; /* Ensure outline is removed on focus */
+}
+
+/* Optional: Add styles for hover effect if desired */
+.homepage-button:hover {
+    opacity: 0.8; /* Slightly change opacity on hover for visual feedback */
+}
+
+
+
+/* Style the user icon */
+.user-icon {
+    width: 40px; /* Fixed size for the user icon */
+    height: 40px; /* Set height to maintain aspect ratio */
+    margin-right: 40px; /* Margin to the right */
+    object-fit: contain; /* Ensures the image fits without distortion */
+}

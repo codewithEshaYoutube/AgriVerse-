@@ -1,0 +1,33 @@
+/* Main container for the app */
+.App {
+  text-align: center;
+  background-color: white; /* Keep the page background white */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; /* Align items to the top */
+  font-family: Arial, sans-serif;
+  position: relative;
+}
+
+/* Background image */
+.background-image {
+  position: fixed; /* Fixed background */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('./Images/FarmingPic.jpg');
+  background-size: cover;
+  background-position: center;
+  z-index: 0; /* Ensure this is lower than other content */
+}
+
+/* Content area */
+.content {
+  position: relative; /* Relative position for stacking context */
+  z-index: 1; /* Bring content in front of the background */
+  padding-top: 80px; /* Space for top bar */
+  width: 100%; /* Full width */
+}

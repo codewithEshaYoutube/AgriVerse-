@@ -1,0 +1,46 @@
+/* Base button class */
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px; /* Default padding */
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: center;
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+    background-color: #E4FFBA; /* Default background color */
+    border-radius: 8px; /* Default rounded corners */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
+  }
+  
+  /* Hover effect */
+  .button:hover {
+    background-color: #c8e59f; /* Darken background on hover */
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
+  }
+  
+  /* Specific class for logos as buttons */
+  .button-logo {
+    padding: 0; /* No padding for logos */
+    background: none; /* Transparent background for logos */
+    border-radius: 0; /* Remove rounded corners for logos */
+    height: 50px; /* Logo button height */
+    width: auto; /* Keep the width auto to maintain logo aspect ratio */
+  }
+  
+  /* Small rectangular button with rounded corners */
+  .button-small-rect {
+    padding: 5px 15px; /* Smaller padding for rectangular buttons */
+    background-color: #f1f1f1; /* Light background for small buttons */
+    border-radius: 15px; /* More rounded corners */
+    font-size: 14px; /* Slightly smaller font size */
+  }
+  
+  /* Full-width logo button */
+  .button-logo-full {
+    width: 100%; /* Takes full width of its container */
+    height: auto; /* Maintains logo aspect ratio */
+    max-width: 200px; /* Optional max width for resizing control */
+  }
+  
