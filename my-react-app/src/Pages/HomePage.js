@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import Container from '../Components/Container'; // Correct import path
-import PageChangeButton from '../Components/PageChangeButton'; // Correct import path
 import GMail from '../Images/email.png';
 import GitHub from '../Images/github.png';
 import LinkedIn from '../Images/linkedin.png';
+import AgriVerseBodyLogo from '../Images/AgriVerseBodyLogo.png';
 
 const HomePage = ({ setCurrentPage }) => {
   const [activeProfile, setActiveProfile] = useState(null);
@@ -77,48 +77,18 @@ const HomePage = ({ setCurrentPage }) => {
 
   return (
     <div className="content">
-      <Container height={300} content={[
-        <h2 key="1">Navigation</h2>,
-        <PageChangeButton 
-          text="Go to Mapping Page" 
-          onClick={() => setCurrentPage('Mapping')}
-          key="mapping"
-        />,
-        <PageChangeButton 
-          text="Go to Groups Page" 
-          onClick={() => setCurrentPage('Groups')}
-          key="groups"
-        />,
-        <PageChangeButton 
-          text="Support" 
-          onClick={() => setCurrentPage('Support')}
-          key="support"
+      {/* Animated AgriVerse Body Logo */}
+      <div className="logo-container">
+        <img 
+          src={AgriVerseBodyLogo} 
+          alt="AgriVerse Logo" 
+          className="animated-logo"
         />
-      ]} />
+      </div>
 
-      {/* Support Page Content */}
-      <div style={{ padding: '0px', fontFamily: 'Arial, sans-serif' }}>
-        <Container height={300} content={[ // Combined Header and About Section
-          <header key="1" style={{ textAlign: 'center' }}>
-            <h1 style={{ fontSize: '2rem' }}>Agriview</h1>
-            <p style={{ fontSize: '1rem', maxWidth: '600px', margin: 'auto' }}>
-              Empowering farmers with Earth Observation Data for informed decision-making.
-            </p>
-            <section style={{ textAlign: 'center', marginTop: '20px' }}>
-              <h2>About the Project</h2>
-              <p style={{ maxWidth: '800px', margin: 'auto' }}>
-                This project leverages Earth Observation data to help farmers make informed decisions regarding water-related challenges.
-                By providing tools to analyze data from NASA and other sources, we aim to improve crop health, optimize water usage,
-                and enhance overall agricultural practices. Our goal is to empower farmers with actionable insights to navigate
-                unpredictable weather and environmental conditions.
-              </p>
-            </section>
-          </header>
-        ]} />
+      <div style={{ height: '20px' }} /> {/* Reduced space between logo and team section */}
 
-        <div style={{ height: '20px' }} /> {/* Reduced space between containers */}
-
-        <section key="3" style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center' }}>
+      <section key="3" style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center' }}>
           {profiles.map((profile) => (
             <div 
               key={profile.id} 
@@ -127,37 +97,43 @@ const HomePage = ({ setCurrentPage }) => {
                 position: 'relative', 
                 cursor: 'pointer', 
                 margin: '10px', 
-                border: '1px solid #ccc', 
-                borderRadius: '8px', 
-                padding: '8px', 
+                border: '1px solid rgba(255, 255, 255, 0.2)', 
+                borderRadius: '12px', 
+                padding: '12px', 
                 width: '180px', 
                 height: '250px', 
-                boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)', 
-                transition: 'transform 0.2s', 
+                boxShadow: '0 8px 32px rgba(0, 0, 0, 0.1)', 
+                transition: 'all 0.3s ease', 
                 textAlign: 'center',
                 overflow: 'hidden',
-                backgroundColor: '#fff',
+                backgroundColor: 'rgba(255, 255, 255, 0.3)',
+                backdropFilter: 'blur(10px)',
+                WebkitBackdropFilter: 'blur(10px)',
                 transform: activeProfile === profile.id ? 'scale(1.05)' : 'scale(1)', 
               }}
               onMouseEnter={(e) => {
-                e.currentTarget.style.transform = 'scale(1.05)'; 
+                e.currentTarget.style.transform = 'scale(1.05) translateY(-5px)'; 
+                e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.4)';
+                e.currentTarget.style.boxShadow = '0 12px 40px rgba(0, 0, 0, 0.15)';
               }}
               onMouseLeave={(e) => {
                 e.currentTarget.style.transform = activeProfile === profile.id ? 'scale(1.05)' : 'scale(1)'; 
+                e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.3)';
+                e.currentTarget.style.boxShadow = '0 8px 32px rgba(0, 0, 0, 0.1)';
               }}
             >
               <img src={profile.imgSrc} alt={profile.name} style={{ width: '80px', height: '80px', borderRadius: '50%', marginBottom: '8px' }} />
-              <h3 style={{ margin: '6px 0', fontSize: '1.1rem' }}>{profile.name}</h3>
-              <p style={{ color: '#555', marginBottom: '6px', fontSize: '0.85rem' }}>{profile.role}</p>
+              <h3 style={{ margin: '6px 0', fontSize: '1.1rem', color: 'white' }}>{profile.name}</h3>
+              <p style={{ color: 'rgba(255, 255, 255, 0.9)', marginBottom: '6px', fontSize: '0.85rem' }}>{profile.role}</p>
               <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '6px' }}>
-    <a href={`mailto:${profile.email}`} style={{ marginRight: '8px', color: '#333' }}>
-        <img src={GMail} alt="Email" style={{ width: '20px', height: '20px' }} />
+    <a href={`mailto:${profile.email}`} style={{ marginRight: '8px', color: 'white' }}>
+        <img src={GMail} alt="Email" style={{ width: '20px', height: '20px', filter: 'brightness(0) invert(1)' }} />
     </a>
-    <a href={profile.linkedin} style={{ marginRight: '8px', color: '#333' }}>
-        <img src={LinkedIn} alt="LinkedIn" style={{ width: '20px', height: '20px' }} />
+    <a href={profile.linkedin} style={{ marginRight: '8px', color: 'white' }}>
+        <img src={LinkedIn} alt="LinkedIn" style={{ width: '20px', height: '20px', filter: 'brightness(0) invert(1)' }} />
     </a>
-    <a href={profile.github} style={{ color: '#333' }}>
-        <img src={GitHub} alt="GitHub" style={{ width: '20px', height: '20px' }} />
+    <a href={profile.github} style={{ color: 'white' }}>
+        <img src={GitHub} alt="GitHub" style={{ width: '20px', height: '20px', filter: 'brightness(0) invert(1)' }} />
     </a>
 </div>
               {activeProfile === profile.id && 
@@ -166,19 +142,18 @@ const HomePage = ({ setCurrentPage }) => {
                   bottom: '10px', 
                   left: '50%', 
                   transform: 'translateX(-50%)', 
-                  color: '#555', 
                   fontSize: '0.8rem', 
                   transition: 'opacity 0.3s', 
                   width: '90%', 
                   textAlign: 'center',
                   margin: '0 auto',
+                  color: 'rgba(255, 255, 255, 0.8)',
                 }}>
                   {profile.description}
                 </div>}
             </div>
           ))}
-        </section>
-      </div>
+      </section>
     </div>
   );
 };

@@ -19,7 +19,7 @@ const ChatBox = () => {
   return (
     <div className="chatbox-container">
       <div className="chatbox-header">
-        <h2>Agriview AI</h2>
+        <h2>AgriVerse AI</h2>
       </div>
       <div className="chatbox-body">
         {messages.map((msg, index) => (

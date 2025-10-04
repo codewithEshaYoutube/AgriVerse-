@@ -1,53 +1,149 @@
+/* Support page styling */
+.support-page {
+  position: relative;
+  z-index: 1;
+  padding-top: 0; /* No additional padding since .content already has 100px */
+  width: 100%;
+  min-height: calc(100vh - 100px); /* Account for top bar padding */
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Center vertically */
+}
+
+.chatbot-container {
+  width: 90%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Beautiful glassmorphism chatbot */
 .chatbox-container {
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .chatbox-header {
-    background-color: #4CAF50; /* Header background color */
-    color: white;
-    padding: 10px;
-    text-align: center;
-  }
-  
-  .chatbox-body {
-    flex-grow: 1;
-    padding: 10px;
-    background-color: #f9f9f9;
-    overflow-y: auto; /* Allow scrolling */
-    max-height: 200px; /* Set max height */
-  }
-  
-  .chatbox-message {
-    margin: 5px 0;
-    padding: 8px;
-    border-radius: 4px;
-    background-color: #e0e0e0; /* Message background color */
-  }
-  
-  .chatbox-footer {
-    display: flex;
-    padding: 10px;
-    background-color: #fff;
-  }
-  
-  .chatbox-input {
-    flex-grow: 1;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
-  
-  .chatbox-send-button {
-    margin-left: 10px;
-    padding: 8px 12px;
-    background-color: #4CAF50; /* Button background color */
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.chatbox-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+}
+
+/* Header with glass effect */
+.chatbox-header {
+  background: rgba(45, 80, 22, 0.8);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  color: white;
+  padding: 20px;
+  text-align: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.chatbox-header h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Chat body with glass styling */
+.chatbox-body {
+  flex-grow: 1;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  overflow-y: auto;
+  max-height: 400px;
+  min-height: 300px;
+}
+
+/* Message styling */
+.chatbox-message {
+  margin: 10px 0;
+  padding: 12px 16px;
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #2d5016;
+  font-weight: 500;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.chatbox-message:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateX(5px);
+}
+
+/* Footer with glass styling */
+.chatbox-footer {
+  display: flex;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  gap: 15px;
+}
+
+/* Input field styling */
+.chatbox-input {
+  flex-grow: 1;
+  padding: 12px 16px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 25px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  color: #2d5016;
+  font-size: 16px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.chatbox-input:focus {
+  border-color: rgba(45, 80, 22, 0.5);
+  background: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 0 0 3px rgba(45, 80, 22, 0.1);
+}
+
+.chatbox-input::placeholder {
+  color: rgba(45, 80, 22, 0.6);
+}
+
+/* Send button styling */
+.chatbox-send-button {
+  padding: 12px 24px;
+  background: rgba(45, 80, 22, 0.8);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.chatbox-send-button:hover {
+  background: rgba(45, 80, 22, 0.9);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.chatbox-send-button:active {
+  transform: translateY(0);
+}
   

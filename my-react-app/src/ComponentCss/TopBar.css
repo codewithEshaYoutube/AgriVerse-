@@ -1,7 +1,10 @@
 .top-bar {
-    background-color: #E4FFBA; /* Light green bar background */
+    background-color: rgba(228, 247, 198, 0.3); /* Glass-like transparent green */
+    backdrop-filter: blur(10px); /* Glass blur effect */
+    -webkit-backdrop-filter: blur(10px); /* Safari support */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Subtle glass border */
     width: 100%; /* Full width bar */
-    height: 60px; /* Height of the top bar */
+    height: 100px; /* Height of the top bar */
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -15,8 +18,8 @@
   
 /* Style the logo */
 .logo {
-    width: 160px; /* Fixed size for the logo */
-    height: 50px; /* Maintain aspect ratio */
+    width: 280px; /* Fixed size for the logo */
+    height: 90px; /* Maintain aspect ratio */
     object-fit: contain; /* Ensures the image fits without distortion */
 }
  
@@ -35,6 +38,43 @@
 /* Optional: Add styles for hover effect if desired */
 .homepage-button:hover {
     opacity: 0.8; /* Slightly change opacity on hover for visual feedback */
+}
+
+/* Navigation menu */
+.navigation-menu {
+    display: flex;
+    gap: 40px; /* Increased space between navigation items */
+    align-items: center;
+}
+
+/* Navigation items */
+.nav-item {
+    color: #2d5016; /* Dark green color matching the theme */
+    font-size: 20px; /* Increased font size for better visibility */
+    font-weight: 600; /* Increased font weight for better prominence */
+    font-family: 'Arial', sans-serif;
+    cursor: pointer;
+    padding: 12px 20px; /* Increased padding for better touch targets */
+    border-radius: 10px; /* Slightly larger border radius */
+    transition: all 0.3s ease;
+    position: relative;
+    text-decoration: none;
+    background: rgba(255, 255, 255, 0.1); /* Subtle glass background */
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.nav-item:hover {
+    background: rgba(45, 80, 22, 0.2); /* Darker green on hover */
+    color: #1a3009; /* Darker text on hover */
+    transform: translateY(-2px); /* Slight lift effect */
+    box-shadow: 0 4px 12px rgba(45, 80, 22, 0.3);
+}
+
+.nav-item:active {
+    transform: translateY(0); /* Reset transform on click */
+    background: rgba(45, 80, 22, 0.3);
 }
 
 

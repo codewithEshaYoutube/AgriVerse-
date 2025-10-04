@@ -64,34 +64,34 @@ const MappingPage = () => {
     };
 
     return (
-        <div className="content">
+        <div className="content page-centered">
             <Container height={300} content={[
                 <h2 key="1">Mapping Data</h2>,
-                <div className="map-container" key="2" style={{ width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                <div className="map-container" key="2">
                     {view === 'map' ? (
                         <iframe
                             title="Google Maps"
-                            width="100%"
-                            height="600"
+                            width="90%"
+                            height="450"
                             frameBorder="0"
                             scrolling="no"
                             marginHeight="0"
                             marginWidth="0"
-                            src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=+(United%20States)&amp;t=&amp;z=4&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+                            src="https://maps.google.com/maps?width=90%25&amp;height=450&amp;hl=en&amp;q=+(United%20States)&amp;t=&amp;z=4&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
                         >
                             <a href="https://www.gps.ie/">gps vehicle tracker</a>
                         </iframe>
                     ) : (
-                        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-start' }}>
+                        <div className="data-insights-container">
                             <img 
                                 src={presetImages[selectedImageIndex]} 
                                 alt={insightNames[selectedImageIndex]} 
-                                style={{ width: '70%', height: 'auto', objectFit: 'cover', marginRight: '0' }} // No margin to make it closer
+                                className="data-insights-map"
                             />
                             <img 
                                 src={legendImages[selectedImageIndex]} 
                                 alt={`Legend for ${insightNames[selectedImageIndex]}`} 
-                                style={{ width: '60%', height: 'auto', objectFit: 'contain', marginLeft: '-150px' }} // Increased negative margin to pull the legend closer
+                                className="data-insights-legend"
                             />
                         </div>
                     )}

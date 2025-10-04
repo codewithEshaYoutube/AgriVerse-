@@ -17,27 +17,29 @@ const GroupsPage = ({ setCurrentPage }) => {
   ];
 
   return (
-    <Container content={[
-      <h1 className="leaderboard-title" key="title">Best Crop Yields</h1>,
-      <table className="leaderboard-table" key="table">
-        <thead>
-          <tr>
-            <th>Rank</th>
-            <th>Name</th>
-            <th>Crop Yield</th>
-          </tr>
-        </thead>
-        <tbody>
-          {leaderboardData.map((entry) => (
-            <tr key={entry.rank}>
-              <td>{entry.rank}</td>
-              <td>{entry.name}</td>
-              <td>{entry.yield}</td>
+    <div className="content page-centered">
+      <Container content={[
+        <h1 className="leaderboard-title" key="title">Best Crop Yields</h1>,
+        <table className="leaderboard-table" key="table">
+          <thead>
+            <tr>
+              <th>Rank</th>
+              <th>Name</th>
+              <th>Crop Yield</th>
             </tr>
-          ))}
-        </tbody>
-      </table>
-    ]} />
+          </thead>
+          <tbody>
+            {leaderboardData.map((entry) => (
+              <tr key={entry.rank}>
+                <td>{entry.rank}</td>
+                <td>{entry.name}</td>
+                <td>{entry.yield}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      ]} />
+    </div>
   );
 };
 

@@ -5,9 +5,20 @@ import HomePage from './Pages/HomePage'; // Correct path for your HomePage compo
 import MappingPage from './Pages/Mapping'; // Correct path for your Mapping component
 import GroupsPage from './Pages/Groups'; // Correct path for your Groups component
 import SupportPage from './Pages/Support';
+import RocketLoading from './Components/RocketLoading';
 
 const App = () => {
   const [currentPage, setCurrentPage] = useState('HomePage'); // State for current page
+  const [isLoading, setIsLoading] = useState(true); // Loading state
+
+  useEffect(() => {
+    // Simulate loading time
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 3000); // 3 seconds loading time
+
+    return () => clearTimeout(timer);
+  }, []);
 
   const renderPage = () => {
     switch (currentPage) {
@@ -26,9 +37,15 @@ const App = () => {
 
   return (
     <div className="App">
-      <TopBar setCurrentPage={setCurrentPage} />
-      <div className="background-image" />
-      {renderPage()}
+      {isLoading ? (
+        <RocketLoading />
+      ) : (
+        <>
+          <TopBar setCurrentPage={setCurrentPage} />
+          <div className="background-image" />
+          {renderPage()}
+        </>
+      )}
     </div>
   );
 };

@@ -28,6 +28,76 @@
 .content {
   position: relative; /* Relative position for stacking context */
   z-index: 1; /* Bring content in front of the background */
-  padding-top: 80px; /* Space for top bar */
+  padding-top: 100px; /* Reduced space for top bar (100px height + minimal extra) */
   width: 100%; /* Full width */
+  min-height: calc(100vh - 100px); /* Ensure content takes full height minus top bar */
+}
+
+/* Centering for specific pages (not Home) */
+.content.page-centered {
+  display: flex; /* Enable flexbox */
+  flex-direction: column; /* Stack content vertically */
+  justify-content: center; /* Center content vertically */
+  align-items: center; /* Center content horizontally */
+}
+
+/* Universal fix for all pages to prevent content going behind top bar */
+.App > div:not(.top-bar) {
+  padding-top: 100px !important;
+}
+
+/* Logo container */
+.logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 20px;
+  margin: 0;
+}
+
+/* Animated logo */
+.animated-logo {
+  max-width: 600px; /* Responsive width */
+  width: 100%;
+  height: auto;
+  opacity: 0;
+  transform: translateY(30px) scale(0.9);
+  animation: logoEntrance 1.5s ease-out forwards;
+  filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.1));
+  transition: all 0.3s ease;
+  animation-fill-mode: forwards;
+}
+
+.animated-logo:hover {
+  transform: translateY(-5px) scale(1.02) !important;
+  filter: drop-shadow(0 15px 30px rgba(0, 0, 0, 0.15)) !important;
+  animation: float 2s ease-in-out infinite !important;
+}
+
+/* Logo entrance animation */
+@keyframes logoEntrance {
+  0% {
+    opacity: 0;
+    transform: translateY(30px) scale(0.9);
+  }
+  50% {
+    opacity: 0.8;
+    transform: translateY(-10px) scale(1.05);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Floating animation */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(-5px) scale(1.02);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(-15px) scale(1.02);
+    opacity: 1;
+  }
 }
