@@ -1,7 +1,7 @@
 import React from 'react';
 import '../ComponentCss/TopBar.css'; // Assuming there's a CSS file for styles
 import logo from '../Images/AgriVerseLogo.png'; // Update with the logo path
-import userIcon from '../Images/user.png'; // User icon path
+import NasaLogo from '../Images/NasaLogo.png';
 
 const TopBar = ({ setCurrentPage }) => {
   return (
@@ -46,7 +46,7 @@ const TopBar = ({ setCurrentPage }) => {
         </span>
       </nav>
       
-      <img src={userIcon} alt="User Icon" className="user-icon" />
+      <img src={NasaLogo} alt="NASA" className="user-icon" />
     </div>
   );
 };

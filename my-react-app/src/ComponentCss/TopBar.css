@@ -81,8 +81,9 @@
 
 /* Style the user icon */
 .user-icon {
-    width: 40px; /* Fixed size for the user icon */
-    height: 40px; /* Set height to maintain aspect ratio */
-    margin-right: 40px; /* Margin to the right */
-    object-fit: contain; /* Ensures the image fits without distortion */
+    width: 64px;
+    height: 64px;
+    margin-right: 40px;
+    object-fit: contain;
+    background: transparent;
 }

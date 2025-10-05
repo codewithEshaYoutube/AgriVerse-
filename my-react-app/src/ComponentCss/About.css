@@ -1,7 +1,139 @@
 /* About Page Styling */
+.about-hero {
+  width: min(1100px, 95%);
+  margin: 0 auto 28px auto;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 20px;
+  padding: 22px 24px;
+}
+
+.about-hero-title {
+  font-size: clamp(2.2rem, 4vw + 1.2rem, 4.2rem);
+  font-weight: 800;
+  color: #2d5016;
+  letter-spacing: 0.5px;
+  margin: 10px 0 6px 0;
+  text-shadow: 0 6px 18px rgba(0,0,0,0.12);
+}
+
+.about-hero-sub {
+  margin: 0 0 18px 0;
+  font-size: clamp(1rem, 1vw + 0.7rem, 1.6rem);
+  color: #2d5016;
+}
+
+.about-team { color: #2d5016; font-weight: 700; }
+
+.about-hero-badge {
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 22px 26px;
+  width: min(1000px, 92%);
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255,255,255,0.3);
+  border-radius: 18px;
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+}
+
+.about-nasa-logo {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: contain;
+  background: transparent; /* remove white ring */
+  padding: 0;
+}
+
+.about-hero-text { display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; }
+
+.about-hero-text h2 {
+  margin: 0 0 6px 0;
+  color: #2d5016;
+  font-weight: 700;
+  font-size: clamp(1.4rem, 1.8vw + 0.9rem, 2.2rem);
+}
+
+/* Hover: change NASA title color to white when hovering the badge */
+.about-hero-badge:hover .about-hero-text h2 {
+  color: #ffffff;
+}
+
+/* Hover: also make project name white and add a subtle glow to the whole badge */
+.about-hero-badge:hover .about-hero-text p {
+  color: #ffffff;
+}
+
+.about-hero-badge:hover {
+  box-shadow: 0 0 24px rgba(255, 255, 255, 0.55), 0 16px 40px rgba(0,0,0,0.18);
+  border-color: rgba(255, 255, 255, 0.6);
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.about-hero-text p {
+  margin: 0;
+  color: #2d5016;
+  font-size: 1.25rem; /* project name larger */
+  font-weight: 700; /* bold project name */
+}
+
+/* Key Features block */
+.about-features-hero {
+  width: min(1100px, 92%);
+  margin: 24px auto 0 auto;
+  background: rgba(255, 255, 255, 0.25);
+  border: 1px solid rgba(255,255,255,0.3);
+  border-radius: 18px;
+  padding: 24px 24px 28px 24px;
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+  color: #2d5016;
+  text-align: center;
+}
+
+.features-title { color: #2d5016; font-size: 1.8rem; margin: 0 0 10px 0; }
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-top: 8px;
+}
+
+.feature-card {
+  background: rgba(255,255,255,0.18);
+  border: 1px solid rgba(255,255,255,0.3);
+  border-radius: 14px;
+  padding: 16px;
+}
+
+.feature-icon {
+  font-size: 32px;
+  width: 56px; height: 56px; margin: 0 auto 8px auto;
+  display: grid; place-items: center;
+  background: rgba(0,0,0,0.18);
+  border-radius: 12px;
+}
+
+.feature-heading { color: #2d5016; margin: 6px 0; }
+.feature-desc { color: #2d5016; margin: 0; font-size: 0.95rem; }
+.features-footnote { margin-top: 16px; color: #2d5016; }
+
+@media (max-width: 768px) {
+  .features-grid { grid-template-columns: 1fr; }
+}
 .about-container {
-  width: 90%;
-  max-width: 800px;
+  width: 95%;
+  max-width: 1100px;
   margin: 0 auto;
   padding: 20px;
 }
@@ -99,6 +231,9 @@
     width: 95%;
     padding: 10px;
   }
+
+  .about-hero-badge { padding: 16px; gap: 12px; }
+  .about-nasa-logo { width: 56px; height: 56px; }
   
   .about-card {
     padding: 20px;
