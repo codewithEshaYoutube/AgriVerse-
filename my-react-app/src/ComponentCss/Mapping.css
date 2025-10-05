@@ -53,6 +53,50 @@
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
 }
 
+/* Glass controls container */
+.mapping-controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.mapping-controls .controls-surface {
+    display: flex;
+    gap: 8px;
+    padding: 8px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+}
+
+.glass-button {
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.45);
+    background: rgba(255, 255, 255, 0.35);
+    color: #000;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.1s ease, box-shadow 0.2s ease;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+.glass-button:hover {
+    background: rgba(255, 255, 255, 0.5);
+    transform: translateY(-1px);
+}
+
+.glass-button.active {
+    background: rgba(230, 240, 255, 0.8);
+    border-color: rgba(180, 200, 255, 0.9);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+}
+
 /* Dropdown styling */
 .dropdown {
     background-color: #E4FFBA; /* Match the top bar color */

@@ -47,26 +47,39 @@ const MappingPage = () => {
         'Drought Hazards',
     ];
 
-    // Handle view change
-    const handleViewChange = (event) => {
-        const selectedView = event.target.value;
-        setView(selectedView);
-
-        // Reset to the first image if switching back to images
-        if (selectedView !== 'map') {
-            setSelectedImageIndex(0);
-        }
+    // Button handlers
+    const handleSelectMap = () => {
+        setView('map');
     };
 
-    // Handle image selection
-    const handleImageChange = (event) => {
-        setSelectedImageIndex(event.target.value);
+    const handleSelectInsights = () => {
+        setView('image');
+        setSelectedImageIndex(0);
+    };
+
+    const handleSelectInsightIndex = (index) => {
+        setSelectedImageIndex(index);
     };
 
     return (
         <div className="content page-centered">
-            <Container height={300} content={[
+            <Container height={300} className="glass" content={[
                 <h2 key="1">Mapping Data</h2>,
+                <div key="controls" className="mapping-controls">
+                    <div className="controls-surface">
+                        <button onClick={handleSelectMap} className={`glass-button ${view === 'map' ? 'active' : ''}`}>Google Map</button>
+                        <button onClick={handleSelectInsights} className={`glass-button ${view === 'image' ? 'active' : ''}`}>Data Insights</button>
+                    </div>
+                    {view === 'image' && (
+                        <div className="controls-surface" style={{ flexWrap: 'wrap', justifyContent: 'center' }}>
+                            {insightNames.map((name, index) => (
+                                <button key={name} onClick={() => handleSelectInsightIndex(index)} className={`glass-button ${selectedImageIndex === index ? 'active' : ''}`}>
+                                    {name}
+                                </button>
+                            ))}
+                        </div>
+                    )}
+                </div>,
                 <div className="map-container" key="2">
                     {view === 'map' ? (
                         <iframe
@@ -94,33 +107,6 @@ const MappingPage = () => {
                                 className="data-insights-legend"
                             />
                         </div>
-                    )}
-                </div>,
-                <div key="3" style={{ marginTop: '20px', textAlign: 'center' }}>
-                    <select 
-                        id="view-select" 
-                        value={view} 
-                        onChange={handleViewChange} 
-                        className="dropdown"
-                    >
-                        <option value="map">Google Map</option>
-                        <option value="image">Data Insights</option> {/* Updated label */}
-                    </select>
-
-                    {view === 'image' && (
-                        <select 
-                            id="image-select" 
-                            value={selectedImageIndex} 
-                            onChange={handleImageChange} 
-                            className="dropdown"
-                            style={{ marginTop: '10px' }} // Additional margin for spacing
-                        >
-                            {insightNames.map((name, index) => ( // Use insight names
-                                <option key={index} value={index}>
-                                    {name} {/* Update to use names */}
-                                </option>
-                            ))}
-                        </select>
                     )}
                 </div>
             ]} />

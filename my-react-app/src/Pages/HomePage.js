@@ -1,8 +1,12 @@
 import React, { useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGlobe } from '@fortawesome/free-solid-svg-icons';
 import GMail from '../Images/email.png';
 import GitHub from '../Images/github.png';
 import LinkedIn from '../Images/linkedin.png';
 import AgriVerseBodyLogo from '../Images/AgriVerseBodyLogo.png';
+import SanaRaza from '../Images/Sana_Raza.jpeg';
+import YubiryGonzalez from '../Images/Yubiry_González.jpeg';
 
 const HomePage = ({ setCurrentPage }) => {
   const [activeProfile, setActiveProfile] = useState(null);
@@ -41,23 +45,22 @@ const HomePage = ({ setCurrentPage }) => {
     },
     {
       id: 4,
-      name: 'Evan Li',
+      name: 'Sana Raza',
       role: 'Front End Developer',
-      email: 'evan@example.com',
-      linkedin: 'https://www.linkedin.com/in/evan-li-4588b4294/',
-      github: 'https://github.com/L1Evan',
-      imgSrc: 'https://assets.spaceappschallenge.org/media/images/IMG_3183_an1OjWp.2e16d0ba.fill-64x64.jpg',
-      description: 'Just another CS major using ChatGPT',
+      email: 'sana.raxa321@gmail.com',
+      linkedin: 'https://www.linkedin.com/in/sana-raza-engineer',
+      github: 'https://github.com/Sanarazaaa',
+      imgSrc: SanaRaza,
+      description: 'Biologist who codes and designs user-centered experiences.',
     },
     {
       id: 5,
-      name: 'Taizo Rashid',
+      name: 'Yubiry González',
       role: 'Front End Developer',
-      email: 'taizo@example.com',
-      linkedin: 'https://www.linkedin.com/in/taizorashid',
-      github: 'https://github.com/taizorashid',
-      imgSrc: 'https://avatars.githubusercontent.com/u/52359118?v=4',
-      description: 'CS major who actually knew what he was doing',
+      linkedin: 'https://www.linkedin.com/in/yubiry-gonzález-414035a3/',
+      website: 'https://yubirygonzalez.com',
+      imgSrc: YubiryGonzalez,
+      description: 'Researcher and technologist specializing in applied AI and intelligent systems.',
     },
   ];
 
@@ -112,22 +115,30 @@ const HomePage = ({ setCurrentPage }) => {
                 e.currentTarget.style.boxShadow = '0 8px 32px rgba(0, 0, 0, 0.1)';
               }}
             >
-              <img src={profile.imgSrc} alt={profile.name} style={{ width: '80px', height: '80px', borderRadius: '50%', marginBottom: '8px' }} />
+              <img src={profile.imgSrc} alt={profile.name} onError={(e) => { const u = (profile.github || '').replace('https://github.com/', '').replace('/', ''); e.currentTarget.onerror = null; e.currentTarget.src = u ? `https://unavatar.io/github/${u}` : 'https://unavatar.io/avatar'; }} style={{ width: '80px', height: '80px', borderRadius: '50%', marginBottom: '8px' }} />
               <h3 style={{ margin: '6px 0', fontSize: '1.1rem', color: 'white' }}>{profile.name}</h3>
               <p style={{ color: 'rgba(255, 255, 255, 0.9)', marginBottom: '6px', marginTop: '2px', fontSize: '0.85rem' }}>{profile.role}</p>
               {profile.subtitle && (
                 <p style={{ color: 'rgba(255, 255, 255, 0.8)', marginBottom: '6px', marginTop: '0px', fontSize: '0.75rem', fontStyle: 'italic' }}>{profile.subtitle}</p>
               )}
               <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '6px' }}>
-    <a href={`mailto:${profile.email}`} style={{ marginRight: '8px', color: 'white' }}>
+    {profile.email && (
+      <a href={`mailto:${profile.email}`} style={{ marginRight: '8px', color: 'white' }}>
         <img src={GMail} alt="Email" style={{ width: '20px', height: '20px', filter: 'brightness(0) invert(1)' }} />
-    </a>
+      </a>
+    )}
     <a href={profile.linkedin} style={{ marginRight: '8px', color: 'white' }}>
         <img src={LinkedIn} alt="LinkedIn" style={{ width: '20px', height: '20px', filter: 'brightness(0) invert(1)' }} />
     </a>
-    <a href={profile.github} style={{ color: 'white' }}>
-        <img src={GitHub} alt="GitHub" style={{ width: '20px', height: '20px', filter: 'brightness(0) invert(1)' }} />
-    </a>
+    {profile.website ? (
+        <a href={profile.website} style={{ color: 'white' }}>
+          <FontAwesomeIcon icon={faGlobe} style={{ width: '20px', height: '20px' }} />
+        </a>
+      ) : (
+        <a href={profile.github} style={{ color: 'white' }}>
+          <img src={GitHub} alt="GitHub" style={{ width: '20px', height: '20px', filter: 'brightness(0) invert(1)' }} />
+        </a>
+      )}
 </div>
               {activeProfile === profile.id && 
                 <div style={{ 
