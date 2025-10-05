@@ -69,7 +69,7 @@ const HomePage = ({ setCurrentPage }) => {
   };
 
   return (
-    <div className="content">
+    <div className="content home-content">
       {/* Animated AgriVerse Body Logo */}
       <div className="logo-container">
         <img 
@@ -81,7 +81,7 @@ const HomePage = ({ setCurrentPage }) => {
 
       <div style={{ height: '20px' }} /> {/* Reduced space between logo and team section */}
 
-      <section key="3" style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center' }}>
+      <section key="3" className="home-profiles" style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center' }}>
           {profiles.map((profile) => (
             <div 
               key={profile.id} 
@@ -89,7 +89,7 @@ const HomePage = ({ setCurrentPage }) => {
               style={{ 
                 position: 'relative', 
                 cursor: 'pointer', 
-                margin: '10px', 
+                margin: '10px 10px 2px 10px', 
                 border: '1px solid rgba(255, 255, 255, 0.2)', 
                 borderRadius: '12px', 
                 padding: '12px', 

@@ -4,8 +4,9 @@
     padding: 20px; /* Maintain vertical padding */
     border-radius: 0; /* Remove rounding */
     box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2); /* Optional shadow for depth */
-    max-width: calc(100% - 400px); /* Ensure the container doesn't exceed the viewport width */
-    width: 100%; /* Set to full width initially */
+    /* Responsive width with safe gutters */
+    width: min(1200px, calc(100% - 40px));
+    max-width: 100%;
     position: relative; /* Ensure position is relative or not set */
     overflow: hidden; /* Prevent content from overflowing */
 }
@@ -23,4 +24,17 @@
     border-radius: 16px;
     border: 1px solid rgba(255, 255, 255, 0.45);
     box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+}
+
+/* Breakpoints for consistent sizing across browsers */
+@media (max-width: 1024px) {
+  .container { padding: 16px; }
+}
+
+@media (max-width: 768px) {
+  .container { width: min(740px, calc(100% - 24px)); padding: 14px; }
+}
+
+@media (max-width: 480px) {
+  .container { width: calc(100% - 16px); padding: 12px; border-radius: 12px; }
 }

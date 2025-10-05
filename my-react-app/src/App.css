@@ -30,8 +30,9 @@
   position: relative; /* Relative position for stacking context */
   z-index: 1; /* Bring content in front of the background */
   padding-top: 80px; /* Reduced space for top bar (80px height + minimal extra) */
+  padding-bottom: 0; /* Remove extra bottom space on Home */
   width: 100%; /* Full width */
-  min-height: calc(100vh - 80px); /* Ensure content takes full height minus top bar */
+  min-height: calc(100vh - 80px); /* Baseline for normal pages */
 }
 
 /* Centering for specific pages (not Home) */
@@ -53,12 +54,12 @@
   justify-content: center;
   align-items: center;
   padding: 10px 20px;
-  margin: 0;
+  margin: 0 0 24px 0; /* add space under body logo */
 }
 
 /* Animated logo */
 .animated-logo {
-  max-width: 600px; /* Responsive width */
+  max-width: min(680px, 90vw); /* Tame huge displays, scale on small */
   width: 100%;
   height: auto;
   opacity: 0;
@@ -67,6 +68,19 @@
   filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.1));
   transition: all 0.3s ease;
   animation-fill-mode: forwards;
+}
+
+/* Slight upward shift for the profiles grid on Home */
+.home-profiles { margin-top: -40px; }
+
+/* Fit Home content better within viewport height */
+.home-content {
+  min-height: auto;
+}
+
+@media (max-width: 768px) {
+  .content { padding-bottom: 12px; }
+  .home-profiles { margin-top: -48px; }
 }
 
 .animated-logo:hover {

@@ -18,7 +18,7 @@ const GroupsPage = ({ setCurrentPage }) => {
 
   return (
     <div className="content page-centered">
-      <Container content={[
+      <Container className="glass" content={[
         <h1 className="leaderboard-title" key="title">Best Crop Yields</h1>,
         <table className="leaderboard-table" key="table">
           <thead>
