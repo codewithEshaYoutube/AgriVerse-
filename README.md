@@ -1,6 +1,6 @@
 # 🚀 OrbitX Engineers — NASA Space Apps Challenge 2025 🌎  
 
-![NASA Space Apps](https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/NASA_logo.svg/512px-NASA_logo.svg.png)  
+![NASA Space Apps](NASA_Space_App.png)  
 > **Official Open Source Project** built for the **NASA Space Apps Challenge 2025**  
 > **Challenge:** *NASA Farm Navigators — Using NASA Data Exploration in Agriculture*  
 > **Funded by NASA’s Earth Science Division** through Booz Allen Hamilton, Mindgrub, and SecondMuse  
