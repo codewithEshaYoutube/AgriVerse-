@@ -2,19 +2,19 @@ import React, { useState } from 'react';
 import Container from '../Components/Container'; // Correct import path
 import '../ComponentCss/Mapping.css'; // Correct path for your CSS file
 
-// Import SVG images
-import DamsImage from '../Images/Dams.svg';
-import DroughtImage from '../Images/Drought.svg';
-import FloodingImage from '../Images/Flooding.svg';
-import PrecipitationImage from '../Images/Precipitation.svg';
-import SoilMoistureImage from '../Images/Soil Moisture.svg';
+// Import new data insights images
+import VegetationImage from '../Images/Vegetation_map.PNG';
+import SevereStormsImage from '../Images/Severe Storms_map.PNG';
+import FiresThermalImage from '../Images/Fires and Thermal Anomalies_map.PNG';
+import DustStormImage from '../Images/Dust Storm_map.PNG';
+import DroughtHazardsImage from '../Images/Drought Hazards_map.PNG';
 
 // Import new legend images
-import DamsLegend from '../Images/DamsLegend.svg';
-import DroughtLegend from '../Images/DroughtLegend.svg';
-import FloodingLegend from '../Images/FloodingLegend.svg';
-import PrecipatationLegend from '../Images/PrecipatationLegend.svg'; // Updated path
-import SoilMoistureLegend from '../Images/Soil MoistureLegend.svg'; // Updated path
+import VegetationLegend from '../Images/Vegetation Legend.png';
+import SevereStormsLegend from '../Images/Severe Storm.png';
+import FiresThermalLegend from '../Images/Fires and Thermal Anomalies.png';
+import DustStormLegend from '../Images/Dust Storm.png';
+import DroughtHazardsLegend from '../Images/Drought Hazard.png';
 
 const MappingPage = () => {
     const [view, setView] = useState('map'); // State to track the current view
@@ -22,29 +22,29 @@ const MappingPage = () => {
 
     // Array of preset images imported
     const presetImages = [
-        DamsImage,
-        DroughtImage,
-        FloodingImage,
-        PrecipitationImage,
-        SoilMoistureImage,
+        VegetationImage,
+        SevereStormsImage,
+        FiresThermalImage,
+        DustStormImage,
+        DroughtHazardsImage,
     ];
 
     // Array of new legend images
     const legendImages = [
-        DamsLegend,
-        DroughtLegend,
-        FloodingLegend,
-        PrecipatationLegend, // Updated path
-        SoilMoistureLegend, // Updated path
+        VegetationLegend,
+        SevereStormsLegend,
+        FiresThermalLegend,
+        DustStormLegend,
+        DroughtHazardsLegend,
     ];
 
     // Array of insight names
     const insightNames = [
-        'Dam Information',
-        'Drought Risk Analytics',
-        'Flood Risk Analytics',
-        'Precipitation Analytics',
-        'Soil Moisture Analytics',
+        'Vegetation',
+        'Severe Storms',
+        'Fires and Thermal Anomalies',
+        'Dust Storm',
+        'Drought Hazards',
     ];
 
     // Handle view change
