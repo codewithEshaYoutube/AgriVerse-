@@ -1,6 +1,6 @@
 # 🚀 OrbitX Engineers — NASA Space Apps Challenge 2025 🌎  
 
-![NASA Space Apps](NASA_Space_App.png)  
+  
 > **Official Open Source Project** built for the **NASA Space Apps Challenge 2025**  
 > **Challenge:** *NASA Farm Navigators — Using NASA Data Exploration in Agriculture*  
 > **Funded by NASA’s Earth Science Division** through Booz Allen Hamilton, Mindgrub, and SecondMuse  
@@ -37,11 +37,8 @@ Our solution — **AgriVerse** — transforms **NASA Earth Observation APIs** in
 | **Saqlain Abid** | 🧑‍💻 Team Lead & Software Developer | 🇵🇰 Pakistan | Directed the project architecture and NASA API backend integration. |
 | **Eesha Tariq** | 👩‍💻 Software Engineer | 🇵🇰 Pakistan | Stanford Section Leader • Founder of AceMed AI • Led frontend with NASA data visualization. |
 | **Shumaila Batool** | 👩‍🔬 Data Scientist | 🇵🇰 Pakistan | Processed NASA climate datasets and developed statistical models for crop simulation. |
-| **Evan Li** | 👨‍💻 Front-End Developer | 🇺🇸 United States | Created responsive UIs and geospatial map layers using NASA satellite imagery. |
-| **Taizo Rashid** | 👨‍💻 Front-End Developer | 🇺🇸 United States | Designed intuitive interfaces and enhanced cross-platform user experience. |
 | **Dr. Yubiry González** | 👩‍🔬 Data Scientist (PhD, Computer Science) | 🇧🇷 Brazil | Expert in ML & Signal Processing • Ensured scientific validation of simulation models. |
-
----
+| **Sana Raza** | 👩‍🚀 Machine Learning Engineer | 🇵🇰 Pakistan | Focused on AI model optimization and backend data pipeline automation. |
 
 ## 🛰️ NASA API Integration  
 
