@@ -14,11 +14,17 @@ const TopBar = ({ setCurrentPage }) => {
       </button>
       
       <nav className="navigation-menu">
-        <span 
-          className="nav-item" 
+        <span
+          className="nav-item"
           onClick={() => setCurrentPage('HomePage')}
         >
           Home
+        </span>
+        <span
+          className="nav-item"
+          onClick={() => setCurrentPage('About')}
+        >
+          About
         </span>
         <span 
           className="nav-item" 

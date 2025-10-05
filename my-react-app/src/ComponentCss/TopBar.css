@@ -4,7 +4,7 @@
     -webkit-backdrop-filter: blur(10px); /* Safari support */
     border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Subtle glass border */
     width: 100%; /* Full width bar */
-    height: 100px; /* Height of the top bar */
+    height: 80px; /* Height of the top bar */
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -18,8 +18,8 @@
   
 /* Style the logo */
 .logo {
-    width: 280px; /* Fixed size for the logo */
-    height: 90px; /* Maintain aspect ratio */
+  width: 220px; /* Fixed size for the logo */
+  height: 70px; /* Maintain aspect ratio */
     object-fit: contain; /* Ensures the image fits without distortion */
 }
  

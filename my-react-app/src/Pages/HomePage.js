@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import Container from '../Components/Container'; // Correct import path
 import GMail from '../Images/email.png';
 import GitHub from '../Images/github.png';
 import LinkedIn from '../Images/linkedin.png';
@@ -11,46 +10,17 @@ const HomePage = ({ setCurrentPage }) => {
   const profiles = [
     {
       id: 1,
-      name: 'Alex Zou',
-      role: 'Front End Developer & Team Leader',
-      email: 'xuekaizou@gmail.com',
-      linkedin: 'https://www.linkedin.com/in/xuekaizou/',
-      github: 'https://github.com/FireguyZou123',
-      imgSrc: 'https://assets.spaceappschallenge.org/media/images/The_Chargin_Bull.2e16d0ba.fill-64x64.png',
-      description: 'Just a finance bro wandering around a bit',
+      name: 'Saqlain Abid',
+      role: 'Software Developer',
+      subtitle: 'Team Lead',
+      email: 'saqlainabid143@gmail.com',
+      linkedin: 'https://www.linkedin.com/in/saqlainabid143/',
+      github: 'https://github.com/Saqlain143',
+      imgSrc: 'https://avatars.githubusercontent.com/u/86692833?v=4',
+      description: 'Software Engineer that loves AI powered apps',
     },
     {
       id: 2,
-      name: 'Ava Lin',
-      role: 'Graphic & UI Designer',
-      email: 'linrxa@gmail.com',
-      linkedin: 'https://www.linkedin.com/in/ava-lin/',
-      github: 'https://github.com/ava-lin',
-      imgSrc: 'https://assets.spaceappschallenge.org/media/images/images_XFrOhXk.2e16d0ba.fill-64x64.jpg',
-      description: 'Was doodling some random stuff',
-    },
-    {
-      id: 3,
-      name: 'Evan Li',
-      role: 'Front End Developer',
-      email: 'evan@example.com',
-      linkedin: 'https://www.linkedin.com/in/evan-li-4588b4294/',
-      github: 'https://github.com/L1Evan',
-      imgSrc: 'https://assets.spaceappschallenge.org/media/images/IMG_3183_an1OjWp.2e16d0ba.fill-64x64.jpg',
-      description: 'Just another CS major using ChatGPT',
-    },
-    {
-      id: 4,
-      name: 'Taizo Rashid',
-      role: 'Front End Developer',
-      email: 'taizo@example.com',
-      linkedin: 'https://www.linkedin.com/in/taizorashid',
-      github: 'https://github.com/taizorashid',
-      imgSrc: 'https://avatars.githubusercontent.com/u/52359118?v=4',
-      description: 'CS major who actually knew what he was doing',
-    },
-    {
-      id: 5,
       name: 'Shumaila Batool',
       role: 'Data Scientist',
       email: 'shumaila.batool@wum.edu.pk',
@@ -60,14 +30,34 @@ const HomePage = ({ setCurrentPage }) => {
       description: 'Turned random data into an actual tool',
     },
     {
-      id: 6,
-      name: 'Saqlain Abid',
-      role: 'Software Developer',
-      email: 'saqlainabid143@gmail.com',
-      linkedin: 'https://www.linkedin.com/in/saqlainabid143/',
-      github: 'https://github.com/Saqlain143',
-      imgSrc: 'https://avatars.githubusercontent.com/u/86692833?v=4',
-      description: 'Software Engineer that loves AI powered apps',
+      id: 3,
+      name: 'Esha Tariq',
+      role: 'Front End Developer',
+      email: 'tariqeesha321@gmail.com',
+      linkedin: 'https://www.linkedin.com/in/esha-tariqdev/',
+      github: 'https://github.com/codewithEshaYoutube/',
+      imgSrc: 'https://github.com/codewithEshaYoutube.png',
+      description: 'Creating beautiful user interfaces',
+    },
+    {
+      id: 4,
+      name: 'Evan Li',
+      role: 'Front End Developer',
+      email: 'evan@example.com',
+      linkedin: 'https://www.linkedin.com/in/evan-li-4588b4294/',
+      github: 'https://github.com/L1Evan',
+      imgSrc: 'https://assets.spaceappschallenge.org/media/images/IMG_3183_an1OjWp.2e16d0ba.fill-64x64.jpg',
+      description: 'Just another CS major using ChatGPT',
+    },
+    {
+      id: 5,
+      name: 'Taizo Rashid',
+      role: 'Front End Developer',
+      email: 'taizo@example.com',
+      linkedin: 'https://www.linkedin.com/in/taizorashid',
+      github: 'https://github.com/taizorashid',
+      imgSrc: 'https://avatars.githubusercontent.com/u/52359118?v=4',
+      description: 'CS major who actually knew what he was doing',
     },
   ];
 
@@ -124,7 +114,10 @@ const HomePage = ({ setCurrentPage }) => {
             >
               <img src={profile.imgSrc} alt={profile.name} style={{ width: '80px', height: '80px', borderRadius: '50%', marginBottom: '8px' }} />
               <h3 style={{ margin: '6px 0', fontSize: '1.1rem', color: 'white' }}>{profile.name}</h3>
-              <p style={{ color: 'rgba(255, 255, 255, 0.9)', marginBottom: '6px', fontSize: '0.85rem' }}>{profile.role}</p>
+              <p style={{ color: 'rgba(255, 255, 255, 0.9)', marginBottom: '6px', marginTop: '2px', fontSize: '0.85rem' }}>{profile.role}</p>
+              {profile.subtitle && (
+                <p style={{ color: 'rgba(255, 255, 255, 0.8)', marginBottom: '6px', marginTop: '0px', fontSize: '0.75rem', fontStyle: 'italic' }}>{profile.subtitle}</p>
+              )}
               <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '6px' }}>
     <a href={`mailto:${profile.email}`} style={{ marginRight: '8px', color: 'white' }}>
         <img src={GMail} alt="Email" style={{ width: '20px', height: '20px', filter: 'brightness(0) invert(1)' }} />
