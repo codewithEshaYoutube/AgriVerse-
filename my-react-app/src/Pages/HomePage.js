@@ -6,7 +6,7 @@ import GitHub from '../Images/github.png';
 import LinkedIn from '../Images/linkedin.png';
 import AgriVerseBodyLogo from '../Images/AgriVerseBodyLogo.png';
 import SanaRaza from '../Images/Sana_Raza.jpeg';
-import YubiryGonzalez from '../Images/Yubiry_González.jpeg';
+import YubiryGonzalez from '../Images/Yubiry_Gonzalez.jpeg';
 
 const HomePage = ({ setCurrentPage }) => {
   const [activeProfile, setActiveProfile] = useState(null);
