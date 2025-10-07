@@ -7,6 +7,8 @@
 
 ---
 
+![NASA Space Apps](NASA_Space_App.png)  
+
 ## 🌾 Mission Overview  
 
 The agriculture community faces a universal challenge: integrating space data into daily farming for sustainability.  
@@ -70,6 +72,7 @@ making real NASA data accessible, engaging, and educational.
 ```bash
 # Clone this repository
 git clone https://github.com/AgriVUE/AgriView.git
+
 
 # Install dependencies
 npm install
