@@ -6,8 +6,21 @@
 > **Project Title:** *AgriVerse — Sustainable Farming through NASA Data*  
 > **Challenge:** *NASA Farm Navigators — Using NASA Data Exploration in Agriculture*  
 > **Funded by NASA’s Earth Science Division** through Booz Allen Hamilton, Mindgrub, and SecondMuse  
+🌐 **Live Project Links**  
 
 ---
+---
+<p align="center">
+
+<a href="https://saqlain143.github.io/AgriVerse/" target="_blank">
+  <img src="https://img.shields.io/badge/🚀%20Project%20Demo-Live%20Now-blue?style=for-the-badge&logo=googlechrome" />
+</a>
+<a href="https://www.spaceappschallenge.org/2025/find-a-team/orbitx-engineers/?tab=project" target="_blank">
+  <img src="https://img.shields.io/badge/📘%20Project%20Details-View%20More-orange?style=for-the-badge&logo=readme" />
+</a>
+
+
+</p>
 
 ## ✅ Submission Proof & Certificate  
 ![Proof of Submission](Proof%20of%20Submission.png) 
