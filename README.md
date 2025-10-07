@@ -7,7 +7,10 @@
 
 ---
 
-![NASA Space Apps](NASA_Space_App.png)  
+## ✅ Submission Proof & Certificate  
+![Proof of Submission](Proof%20of%20Submission.png) 
+
+---
 
 ## 🌾 Mission Overview  
 
@@ -43,20 +46,34 @@ Our solution — **AgriVerse** — transforms **NASA Earth Observation APIs** in
 | **Taizo Rashid** | 👨‍💻 Front-End Developer | 🇺🇸 United States | Designed intuitive interfaces and enhanced cross-platform user experience. |
 | **Dr. Yubiry González** | 👩‍🔬 Data Scientist (PhD, Computer Science) | 🇧🇷 Brazil | Expert in ML & Signal Processing • Ensured scientific validation of simulation models. |
 
+![Team OrbitX](teampage.png)
+
 ---
 
 ## 🛰️ NASA API Integration  
 
-- Authenticated using **NASA Earthdata Login System**  
-- Fetched real-time data on **soil moisture**, **temperature**, and **vegetation indices**  
-- Visualized dynamic data insights with **React + Plotly.js**  
-- Enabled global users to simulate **sustainable farming** using actual NASA datasets  
+- Authenticated via **NASA Earthdata Login System**  
+- Accessed real-time data on:
+  - 🌡️ Temperature  
+  - 🌱 Vegetation Indices  
+  - 💧 Soil Moisture  
+  - ☁️ Climate & Storm Forecast  
+- Visualized insights through **React + Plotly.js** dashboards  
+- Enabled users to simulate sustainable farming with **live NASA datasets**
+
+### 🖼️ Sample Visualizations  
+
+| Visualization | Description |
+|----------------|--------------|
+| ![Vegetation](Vegetation_recommendation.png) | AI-based vegetation growth prediction |
+| ![Thermal](thermal_anormalities.png) | Thermal anomalies detected via NASA data |
+| ![Storms](storm_possibilities.png) | Global storm and weather prediction insights |
 
 ---
 
 ## 🌟 Impact  
 
-By blending **space technology and sustainable agriculture**,  
+By blending **space technology** and **sustainable agriculture**,  
 we empower students, farmers, and researchers to **learn through simulation** —  
 making real NASA data accessible, engaging, and educational.  
 
@@ -72,7 +89,6 @@ making real NASA data accessible, engaging, and educational.
 ```bash
 # Clone this repository
 git clone https://github.com/AgriVUE/AgriView.git
-
 
 # Install dependencies
 npm install
