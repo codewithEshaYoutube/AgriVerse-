@@ -1,7 +1,9 @@
-# 🚀 OrbitX Engineers — NASA Space Apps Challenge 2025 🌎  
+# 🌾 **AgriVerse — NASA Space Apps Challenge 2025** 🚀  
+### *By OrbitX Engineers (Official Open Source Project)*  
 
 ![NASA Space Apps](NASA_Space_App.png)  
-> **Official Open Source Project** built for the **NASA Space Apps Challenge 2025**  
+
+> **Project Title:** *AgriVerse — Sustainable Farming through NASA Data*  
 > **Challenge:** *NASA Farm Navigators — Using NASA Data Exploration in Agriculture*  
 > **Funded by NASA’s Earth Science Division** through Booz Allen Hamilton, Mindgrub, and SecondMuse  
 
